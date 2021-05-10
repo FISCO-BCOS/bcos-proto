@@ -13,4 +13,5 @@ message PBRawBlock{
     // the block type, include: 
     // CompleteBlock, OnlyWithTransactionsHash
     int32 type = 7;
+    repeated bytes nonceList = 8;
 }
