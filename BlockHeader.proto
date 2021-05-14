@@ -8,5 +8,6 @@ message PBSignatureList
 message PBRawBlockHeader{
     int32 version = 1;
     bytes hashFieldsData = 2;
+    bytes hashFieldsHash = 4;
     repeated PBSignatureList signatureList = 3;
 }
