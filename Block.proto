@@ -1,6 +1,10 @@
 syntax = "proto3";
 package bcos.protocol;
-
+message PBRawTransactionMetaData
+{
+    bytes hash = 1;
+    bytes to = 2;
+};
 // Mainly used for block data packet encoding when network transmission
 message PBRawBlock{
     int32 version = 1;
@@ -8,7 +12,7 @@ message PBRawBlock{
     repeated bytes transactions = 3;
     repeated bytes receipts = 4;
     // In some scenarios, only transaction hashes are included in the block
-    repeated bytes transactionsHash = 5;
+    repeated PBRawTransactionMetaData transactionsMetaData = 5;
     repeated bytes receiptsHash = 6;
     // the block type, include: 
     // CompleteBlock, OnlyWithTransactionsHash
