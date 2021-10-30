@@ -4,6 +4,8 @@ message PBRawTransactionMetaData
 {
     bytes hash = 1;
     bytes to = 2;
+    uint32 attribute = 3;
+    string source = 4;
 };
 // Mainly used for block data packet encoding when network transmission
 message PBRawBlock{
