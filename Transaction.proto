@@ -17,4 +17,6 @@ message PBRawTransaction{
     bytes hashFieldsHash = 3;
     bytes signatureData = 2;
     int64 import_time = 12;
+    uint32 attribute = 13;
+    string source = 14;
 }
